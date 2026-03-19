@@ -269,7 +269,9 @@
     </div>
    </section><!-- Footer -->
    
-<?php
-include('templates/footer.html');
+
+   <!-- FOOTER SECTION------------------------------------------------- -->
+<?php 
+include __DIR__ . '/templates/footer.html';
 ?>  
-<!-- FOOTER SECTION------------------------------------------------- -->
+
