@@ -8,11 +8,81 @@
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
   <script src="/_sdk/element_sdk.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./styles/main.css">
-<script src="/_sdk/data_sdk.js" type="text/javascript"></script>
 
-</head>
- 
+
+<style>
+    :root {
+      --bs-primary: #512da8;
+      --bs-secondary: #673ab7;
+      --bs-success: #198754;
+      --bs-danger: #dc3545;
+      --bs-warning: #ffc107;
+      --bs-info: #0dcaf0;
+      --bs-light: #f8f9fa;
+      --bs-dark: #212529;
+      --bs-gray-100: #f8f9fa;
+      --bs-gray-200: #e9ecef;
+      --bs-gray-300: #dee2e6;
+      --bs-gray-500: #adb5bd;
+      --bs-gray-700: #495057;
+    }
+    
+    body {
+      box-sizing: border-box;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    
+    .app-gradient-hero {
+      background: linear-gradient(135deg, #512da8 0%, #673ab7 100%);
+    }
+    
+    .app-gradient-accent {
+      background: linear-gradient(135deg, #673ab7 0%, #6f42c1 100%);
+    }
+    
+    .service-card {
+      transition: all 0.3s ease;
+      border: 1px solid #e9ecef;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(81, 45, 168, 0.15);
+      border-color: #512da8;
+    }
+    
+    .project-card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #e9ecef;
+      transition: all 0.3s ease;
+    }
+    
+    .project-card:hover {
+      border-color: #512da8;
+      box-shadow: 0 12px 24px rgba(81, 45, 168, 0.15);
+    }
+    
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(81, 45, 168, 0.1), rgba(103, 58, 183, 0.1));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .project-card:hover::before {
+      opacity: 1;
+    }
+  </style>
+
+
+<script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
  <body class="h-full">
   <div id="app" class="h-full w-full overflow-auto" style="background-color: #f8f9fa;"><!-- Navigation -->
    <nav id="nav-section" class="w-full border-b" style="background-color: #ffffff; border-color: #dee2e6;">
@@ -106,12 +176,12 @@
         <p class="text-sm" style="color: #64748b;">Happy Clients</p>
        </div>
       </div>
+     </div>
     </div>
-    </div>
-  </section>
-
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="w-full py-20 px-6" style="background-color: #ffffff;">
+   </section>
+   
+   <!-- Portfolio Section -->
+   <section id="portfolio" class="w-full py-20 px-6" style="background-color: #ffffff;">
     <div class="max-w-6xl mx-auto">
      <div class="text-center mb-16">
       <p class="text-sm font-semibold uppercase tracking-wider mb-3" style="color: #512da8;">Our Work</p>
@@ -144,10 +214,10 @@
       </div>
      </div>
     </div>
-  </section>
-
-  <!-- Blog Section -->
-  <section id="blog" class="w-full py-20 px-6" style="background-color: #f8f9fa;">
+   </section>
+   
+   <!-- Blog Section -->
+   <section id="blog" class="w-full py-20 px-6" style="background-color: #f8f9fa;">
     <div class="max-w-6xl mx-auto">
      <div class="text-center mb-16">
       <p class="text-sm font-semibold uppercase tracking-wider mb-3" style="color: #512da8;">Latest Insights</p>
@@ -186,110 +256,36 @@
       </div>
      </div>
     </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="w-full py-20 px-6" style="background-color: #1e293b;">
+   </section>
+   
+   <!-- Contact Section -->
+   <section id="contact" class="w-full py-20 px-6" style="background-color: #1e293b;">
     <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: #ffffff;">Ready to Start Your Project?</h2>
-    <p class="text-lg mb-10" style="color: #ACB4C8;">Let's build something amazing together. Get in touch with us today.</p>
-
+     <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: #ffffff;">Ready to Start Your Project?</h2>
+     <p class="text-lg mb-10" style="color: #ACB4C8;">Let's build something amazing together. Get in touch with us today.</p>
+     
+     
     <!-- ACTUAL CONTACT FORM -->
-    <div class="p-8 rounded-2xl wireframe-box" style="border-color: #475569; background-color: #334155;">
+     
+     <div class="p-8 rounded-2xl wireframe-box" style="border-color: #475569; background-color: #334155;">
       <div class="grid md:grid-cols-2 gap-6 mb-6">
-      <form id="contactForm" action="confirmation.php" method="post" autocomplete="off" novalidate>
-      <!-- Full name -->
-        <div class="text-left form-floating mb-3">
-          <label for="fname" class="block text-sm font-medium mb-2" style="color: #cbd5e1;">Full name</label>
-            <input
-              class="form-control h-12 rounded-lg wireframe-box" style="border-color: #64748b; background-color: #475569; color: #fff; padding:.7em;"
-              id="fname"
-              type="text"
-              name="fName"
-              placeholder="Enter your name"
-              maxlength="100"
-              required
-            >
-            <div class="invalid-feedback">Please enter your full name.</div>
-        </div>
-      <!-- Email -->
-      <div class="text-left form-floating mb-3">
-        <label for="email" class="block text-sm font-medium mb-2" style="color: #cbd5e1;">Email address</label>
-        <input
-          class="form-control h-12 rounded-lg wireframe-box" style="border-color: #64748b; background-color: #475569; color: #fff; padding:.7em;"
-          id="email"
-          name="email"
-          type="email"
-          placeholder="name@email.com"
-          maxlength="150"
-          required
-          >
-        <div class="invalid-feedback">Please enter a valid email address.</div>
+       <div class="text-left"><label class="block text-sm font-medium mb-2" style="color: #cbd5e1;">Name</label>
+        <div class="h-12 rounded-lg wireframe-box" style="border-color: #64748b; background-color: #475569;"></div>
+       </div>
+ 
+       <div class="text-left"><label class="block text-sm font-medium mb-2" style="color: #cbd5e1;">Email</label>
+        <div class="h-12 rounded-lg wireframe-box" style="border-color: #64748b; background-color: #475569;"></div>
+       </div>
       </div>
-      <!-- Phone -->
-      <div class="text-left form-floating mb-1">
-        <label for="phone" class="block text-sm font-medium mb-2" style="color: #cbd5e1;">Phone number</label>
-        <input
-          class="form-control h-12 rounded-lg wireframe-box" style="border-color: #64748b; background-color: #475569; color: #fff; padding:.7em;"
-          id="phone"
-          name="phone"
-          type="tel"
-          placeholder="(123) 123-1234"
-          maxlength="14"
-          inputmode="numeric"
-          required
-          >
-        <div class="invalid-feedback">Please enter a valid 10-digit phone number.</div>
-      </div>
-      <div class="form-text mb-3">Enter a 10-digit phone number.</div>
-    </div>
-      <!-- Message -->
-      <div class="text-left form-floating mb-3">
-      <label for="message" class="block text-sm font-medium mb-2" style="color: #cbd5e1;">Message</label>  
-      <textarea
-          class="form-control h-32 rounded-lg wireframe-box" style="border-color: #64748b; background-color: #475569; color: #fff; padding:.7em;"
-          id="message"
-          name="message"
-          placeholder="Enter your message here..."
-          style="height: 10rem"
-          maxlength="2000"
-          required
-          ></textarea>
-        <div class="invalid-feedback">Please enter a message.</div>
-      </div>
-      <!-- Honeypot -->
-      <div style="display:none;">
-      <label for="website">Website</label>
-        <input
-          type="text"
-          id="website"
-          name="website"
-          value=""
-          tabindex="-1"
-          autocomplete="off"
-          >
-      </div>
-      <!-- Time check -->
-      <input type="hidden" name="form_time" value="<?php echo time(); ?>">
-      <!-- Submit button -->
-      <div class="d-grid">
-      <button class="w-full py-4 rounded-lg font-semibold transition hover:opacity-80" style="background-color: #094CB9; color: #ffffff;">   
-      <input
-        class="btn btn-primary btn-lg"
-        id="submitButton"
-        type="submit"
-        value="Send Message"
-        >
-      </button>
-      </div>
-      </form>
-      </div>
+      <div class="text-left mb-6"><label class="block text-sm font-medium mb-2" style="color: #cbd5e1;">Message</label>
+       <div class="h-32 rounded-lg wireframe-box" style="border-color: #64748b; background-color: #475569;"></div>
+      </div><button class="w-full py-4 rounded-lg font-semibold transition hover:opacity-90" style="background-color: #094CB9; color: #ffffff;"> Send Message </button>
+     </div>
+
     </div>
    </section>
    
    <!-- Footer -->
-    <script src="./scripts/contactV.js"></script>
-    <script src="./scripts/navigation.js"></script>
 <?php 
 include __DIR__ . '/templates/footer.html';
 ?>  
