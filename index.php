@@ -167,71 +167,67 @@ include __DIR__ . '/templates/header.php';
     <div class="max-w-4xl mx-auto text-center">
     <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: #ffffff;">Ready to Start Your Project?</h2>
     <p class="text-lg mb-10" style="color: #ACB4C8;">Let's build something amazing together. Get in touch with me today.</p>
-
-    <!-- ACTUAL CONTACT FORM -->
-    <div class="p-8 rounded-2xl wireframe-box" style="border-color: #475569; background-color: #334155;">
-      <div class="grid md:grid-cols-2 gap-6 mb-6">
-      <form id="contactForm" action="confirmation.php" method="post" autocomplete="off" novalidate>
-      <!-- Full name -->
-        <div class="text-left form-floating mb-3">
-          <label for="fname" class="block text-sm font-medium mb-2" style="color: #cbd5e1;">Full name</label>
-            <input
-              class="form-control h-12 rounded-lg wireframe-box" style="border-color: #64748b; background-color: #475569; color: #fff; padding:.7em;"
-              id="fname"
-              type="text"
-              name="fName"
-              placeholder="Enter your name"
-              maxlength="100"
-              required
-            >
-            <div class="invalid-feedback">Please enter your full name.</div>
-        </div>
-      <!-- Email -->
-      <div class="text-left form-floating mb-3">
-        <label for="email" class="block text-sm font-medium mb-2" style="color: #cbd5e1;">Email address</label>
-        <input
-          class="form-control h-12 rounded-lg wireframe-box" style="border-color: #64748b; background-color: #475569; color: #fff; padding:.7em;"
-          id="email"
-          name="email"
-          type="email"
-          placeholder="name@email.com"
-          maxlength="150"
-          required
-          >
-        <div class="invalid-feedback">Please enter a valid email address.</div>
-      </div>
-      <!-- Phone -->
-      <div class="text-left form-floating mb-1">
-        <label for="phone" class="block text-sm font-medium mb-2" style="color: #cbd5e1;">Phone number</label>
-        <input
-          class="form-control h-12 rounded-lg wireframe-box" style="border-color: #64748b; background-color: #475569; color: #fff; padding:.7em;"
-          id="phone"
-          name="phone"
-          type="tel"
-          placeholder="(123) 123-1234"
-          maxlength="14"
-          inputmode="numeric"
-          required
-          >
-        <div class="invalid-feedback">Please enter a valid 10-digit phone number.</div>
-      </div>
-      <div class="form-text mb-3">Enter a 10-digit phone number.</div>
+  <!-- ACTUAL CONTACT FORM -->
+  <div class="contact-card">
+  <form id="contactForm" action="confirmation.php" method="post" autocomplete="off" novalidate>
+    <!-- Full name -->
+    <div class="form-group">
+      <label for="fname" class="sr-only">Full name</label>
+      <input
+        class="contact-field"
+        id="fname"
+        type="text"
+        name="fName"
+        placeholder="Full name"
+        maxlength="100"
+        minlength="3"
+        required
+      >
+      <div class="invalid-feedback">Please enter your full name.</div>
     </div>
-      <!-- Message -->
-      <div class="text-left form-floating mb-3">
-      <label for="message" class="block text-sm font-medium mb-2" style="color: #cbd5e1;">Message</label>  
+    <!-- Email -->
+    <div class="form-group">
+      <label for="email" class="sr-only">Email address</label>
+      <input
+        class="contact-field"
+        id="email"
+        name="email"
+        type="email"
+        placeholder="Email address"
+        maxlength="150"
+        required
+      >
+      <div class="invalid-feedback">Please enter a valid email address.</div>
+    </div>
+    <!-- Phone -->
+    <div class="form-group">
+      <label for="phone" class="sr-only">Phone number</label>
+      <input
+        class="contact-field"
+        id="phone"
+        name="phone"
+        type="tel"
+        placeholder="Phone number"
+        maxlength="14"
+        inputmode="numeric"
+        required
+      >
+      <div class="invalid-feedback">Please enter a valid 10-digit phone number.</div>
+    </div>
+    <!-- Message -->
+    <div class="form-group">
+      <label for="message" class="sr-only">Message</label>
       <textarea
-          class="form-control h-32 rounded-lg wireframe-box" style="border-color: #64748b; background-color: #475569; color: #fff; padding:.7em;"
-          id="message"
-          name="message"
-          placeholder="Enter your message here..."
-          style="height: 10rem"
-          maxlength="2000"
-          required
-          ></textarea>
-        <div class="invalid-feedback">Please enter a message.</div>
-      </div>
-      <!-- Honeypot -->
+        class="contact-field contact-textarea"
+        id="message"
+        name="message"
+        placeholder="Enter your message here..."
+        maxlength="2000"
+        required
+      ></textarea>
+      <div class="invalid-feedback">Please enter a message.</div>
+    </div>
+      <!-- Check for autocomplete bots -->
       <div style="display:none;">
       <label for="website">Website</label>
         <input
@@ -247,9 +243,8 @@ include __DIR__ . '/templates/header.php';
       <input type="hidden" name="form_time" value="<?php echo time(); ?>">
       <!-- Submit button -->
       <div class="d-grid">
-      <button class="w-full py-4 rounded-lg font-semibold transition hover:opacity-80" style="background-color: #094CB9; color: #ffffff;">   
+      <button class="btn btn-primary btn-lg">   
       <input
-        class="btn btn-primary btn-lg"
         id="submitButton"
         type="submit"
         value="Send Message"
@@ -259,8 +254,7 @@ include __DIR__ . '/templates/header.php';
       </form>
       </div>
     </div>
-   </section>
-   
+   </section>  
    <!-- Footer -->
     <script src="./scripts/contactV.js"></script>
     <script src="./scripts/navigation.js"></script>

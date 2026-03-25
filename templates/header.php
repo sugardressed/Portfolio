@@ -31,7 +31,7 @@
             if (defined('TITLE')) { //Is the title defined?
                 print TITLE;
             } else { //The title is not defined.
-                print 'Elizabeth Portfolio';
+                print 'Elizabeth\'s Portfolio';
             }
             ?></title>
         <!-- SITE TAB ICON -->
