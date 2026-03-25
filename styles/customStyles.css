@@ -88,4 +88,75 @@
   margin: 2em;
   background: #d1c4e9;
   border-radius: 25%;
+}
+
+footer a {
+  color: #fff;
+}
+footer h4 {
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 1.5rem !important;
+}
+footer ul {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #d1c4e9;
+}
+footer li a {
+  color: #BDBDBD;
+}
+footer li a:hover {
+  color: #e040fb;
+}
+footer .text-gradient {
+  background: linear-gradient(90deg, #38bdf8, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+footer .connectIcons .social-icon {
+  display: inline-block;
+  text-decoration: none;
+}
+footer .connectIcons .social-icon i {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease, -webkit-text-fill-color 0.3s ease;
+  animation: iconAttention 3s ease-in-out infinite;
+}
+footer .connectIcons .d-flex:nth-of-type(1) .social-icon i {
+  animation-delay: 0s;
+}
+footer .connectIcons .d-flex:nth-of-type(2) .social-icon i {
+  animation-delay: 0.4s;
+}
+footer .connectIcons .social-icon:hover i {
+  transform: translateY(-4px) scale(1.1);
+  background: none !important;
+  -webkit-text-fill-color: #ffffff !important;
+  color: #ffffff !important;
+}
+@keyframes iconAttention {
+  0% {
+    transform: rotate(0deg);
+  }
+  4% {
+    transform: rotate(-10deg);
+  }
+  8% {
+    transform: rotate(10deg);
+  }
+  12% {
+    transform: rotate(-6deg);
+  }
+  16% {
+    transform: rotate(6deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }/*# sourceMappingURL=customStyles.css.map */

@@ -6,6 +6,8 @@ $accentColor:#e040fb;
 $mGray: #d1c4e9;
 $dGray:#757575;
 $lGray:#BDBDBD;
+$white:#fff;
+
 
 //BREAK POINTS
 
@@ -123,3 +125,74 @@ $mobile: 500px;
      background: $mGray;
      border-radius: 25%;
 }
+
+    footer{
+      a{
+            color:$white;
+      }
+      h4{
+      color:$white;
+      font-weight: 500;
+      margin-bottom: 1.5rem !important;
+      }
+      ul{
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      color:$mGray
+      }
+      li{
+            a{
+            color:$lGray;
+
+            }
+            a:hover{
+                  color:$accentColor;
+            }
+      }
+
+// SOCIAL ICONS
+
+.text-gradient {
+  background: linear-gradient(90deg, #38bdf8, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.connectIcons .social-icon {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.connectIcons .social-icon i {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease, -webkit-text-fill-color 0.3s ease;
+  animation: iconAttention 3s ease-in-out infinite;
+}
+
+.connectIcons .d-flex:nth-of-type(1) .social-icon i {
+  animation-delay: 0s;
+}
+
+.connectIcons .d-flex:nth-of-type(2) .social-icon i {
+  animation-delay: 0.4s;
+}
+
+.connectIcons .social-icon:hover i {
+  transform: translateY(-4px) scale(1.1);
+  background: none !important;
+  -webkit-text-fill-color: #ffffff !important;
+  color: #ffffff !important;
+}
+
+@keyframes iconAttention {
+  0%   { transform: rotate(0deg); }
+  4%   { transform: rotate(-10deg); }
+  8%   { transform: rotate(10deg); }
+  12%  { transform: rotate(-6deg); }
+  16%  { transform: rotate(6deg); }
+  20%  { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+    }
