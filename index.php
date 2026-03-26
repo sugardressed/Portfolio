@@ -3,34 +3,59 @@ include __DIR__ . '/templates/header.php';
 ?>  
 <!-- Hero Section -->
 <!-- MAIN SECTIONS -->
-   <section id="hero-section" class="w-full py-20 px-6 app-gradient-hero text-white">
-    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-     <div class="space-y-6">
-      <div class="inline-block px-4 py-2 rounded-full text-xs font-medium" style="background-color: rgba(255, 255, 255, 0.2); color: #ffffff;">
-       WEB DESIGN + DEVELOPMENT
-      </div>
-      <h1 id="hero-title" class="text-4xl md:text-5xl font-bold leading-tight" style="color: #ffffff;">Turning Ideas into Outcomes</h1>
-      <p id="hero-subtitle" class="text-lg leading-relaxed" style="color: rgba(255, 255, 255, 0.9);">I craft innovative software solutions that transform businesses and drive growth through cutting-edge technology.</p>
-      <div class="flex flex-wrap gap-4 pt-4"><button id="cta-hero" class="px-8 py-3 rounded-lg font-semibold transition hover:shadow-lg flex items-center gap-2" style="background-color: #ffffff; color: #512da8;"> <span>Get Started</span> <i data-lucide="arrow-right" class="w-5 h-5"></i> </button> <button class="px-8 py-3 rounded-lg font-semibold transition border hover:bg-white hover:bg-opacity-10" style="border-color: #ffffff; color: #ffffff;"> Learn More </button>
-      </div>
-     </div>
-     <div class="relative">
-      <div class="aspect-square rounded-2xl flex items-center justify-center" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); border: 2px solid rgba(255, 255, 255, 0.2);">
-       <div class="text-center space-y-4" style="color: rgba(255, 255, 255, 0.6);"><img src="./assets/images/EliPic.png" width="50%" alt="ElizabethRamirez">
-       </div>
-      </div>
-      <div class="absolute -bottom-4 -left-4 w-24 h-24 rounded-xl" style="background: rgba(255, 255, 255, 0.1); border: 2px solid rgba(255, 255, 255, 0.2);"></div>
-      <div class="absolute -top-4 -right-4 w-16 h-16 rounded-full" style="background: rgba(25, 135, 84, 0.2); border: 2px solid rgba(25, 135, 84, 0.4);"></div>
-     </div>
+<section id="hero-section" class="w-full py-20 px-6 app-gradient-hero text-white">
+<!-- MOTION DEMO STARTS-->
+  <div class="code-bg" aria-hidden="true">
+    <div class="code-panel" id="code-panel">
+      <pre>
+      <span class="kw">const</span> portfolio = <span class="fn">new</span> Xugarsoft();
+      <span class="kw">function</span> buildExperience() {
+      <span class="kw">return</span> skills.map(skill => skill.level);
+      }
+      <span class="fn">fetch</span>('/api/projects')
+      .then(res => res.json())
+      .then(data => render(data));
+      <span class="sql">SELECT</span> * <span class="sql">FROM</span> Projects
+      <span class="sql">ORDER BY</span> CreatedDate <span class="sql">DESC</span>;
+      include('./templates/header.php');
+      <span class="kw">const</span> menuToggle = document.getElementById("menu-toggle");
+      </pre>
     </div>
-   </section>
+  </div>
+<!-- MOTION DEMO ENDS -->
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <!-- INTRODUCTION   -->
+    <div class="space-y-6">
+      <div class="inline-block px-4 py-2 rounded-full text-xs font-medium" style="background-color: rgba(255, 255, 255, 0.2);">
+      WEB DESIGN + DEVELOPMENT
+      </div>
+      <h1 id="hero-title" class="text-4xl md:text-5xl font-bold leading-tight">Turning Ideas into Outcomes</h1>
+      <p id="hero-subtitle" class="text-lg leading-relaxed">I craft innovative web solutions that transform businesses, driving growth and online presence.</p>
+      <div class="flex flex-wrap gap-4 pt-4">
+      <a href="#contact"><button id="cta-hero" class="px-8 py-3 rounded-lg font-semibold">Get Started </button> </a>
+      <a href="#about"><button class="px-8 py-3 rounded-lg font-semibold transition border hover:bg-white hover:bg-opacity-10" style="border-color: #ffffff;color:#fff;"> Learn More </button></a>
+      </div>
+    </div>
+    <!-- PICTURE -->
+    <div class="relative">
+      <div class="aspect-square rounded-2xl flex items-center justify-center"
+          style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); border: 2px solid rgba(255, 255, 255, 0.2);"> 
+        <img src="./assets/images/EliPic.png"
+        alt="ElizabethRamirez"
+        class="w-1/2 mx-auto object-cover rounded-full ">
+      </div>
+    </div>
+  </div>
+</section>
    
-   <!-- Services Section -->
+   <!-- Experience Section -->
    <section id="services" class="w-full py-20 px-6" style="background-color: #f8f9fa;">
+
+
     <div class="max-w-6xl mx-auto">
      <div class="text-center mb-16">
-      <p class="text-sm font-semibold uppercase tracking-wider mb-3" style="color: #512da8;">What We Offer</p>
-      <h2 id="services-title" class="text-3xl md:text-4xl font-bold" style="color: #212529;">Our Services</h2>
+      <p class="text-sm font-semibold uppercase tracking-wider mb-3" style="color: #512da8;">What is my experience</p>
+      <h2 id="services-title" class="text-3xl md:text-4xl font-bold" style="color: #212529;">Experience</h2>
      </div>
      <div class="grid md:grid-cols-3 gap-8"><!-- Service Card 1 -->
       <div class="p-8 rounded-2xl service-card" style="background-color: #ffffff;">
@@ -91,31 +116,61 @@ include __DIR__ . '/templates/header.php';
       <p class="text-sm font-semibold uppercase tracking-wider mb-3" style="color: #512da8;">My Work</p>
       <h2 class="text-3xl md:text-4xl font-bold" style="color: #212529;">Featured Projects</h2>
      </div>
-     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"><!-- Project 1 -->
-      <div class="group rounded-2xl overflow-hidden project-card">
-       <div class="aspect-video flex items-center justify-center" style="background: linear-gradient(135deg, #512da8, #673ab7); color: rgba(255, 255, 255, 0.6);"><i data-lucide="layout" class="w-12 h-12"></i>
+     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+     
+     <!-- Project 1 -->
+     <div class="group rounded-2xl overflow-hidden project-card">
+       <div class="aspect-video flex items-center justify-center" style="background: linear-gradient(135deg, #512da8, #673ab7); color: rgba(255, 255, 255, 0.6);">
+        <!-- <i data-lucide="layout" class="w-12 h-12"></i> -->
+       <img class="img-fluid" src="./assets/images/foreveryoungpage.png" alt="Forever Young Supplements Site" />
        </div>
        <div class="p-6" style="background-color: #ffffff;">
-        <h3 class="font-bold mb-2" style="color: #212529;">Project Title</h3>
-        <p class="text-sm" style="color: #495057;">Web Application</p>
-       </div>
-      </div><!-- Project 2 -->
-      <div class="group rounded-2xl overflow-hidden project-card">
-       <div class="aspect-video flex items-center justify-center" style="background: linear-gradient(135deg, #673ab7, #0dcaf0); color: rgba(255, 255, 255, 0.6);"><i data-lucide="layers" class="w-12 h-12"></i>
-       </div>
-       <div class="p-6" style="background-color: #ffffff;">
-        <h3 class="font-bold mb-2" style="color: #212529;">Project Title</h3>
-        <p class="text-sm" style="color: #495057;">Mobile App</p>
-       </div>
-      </div><!-- Project 3 -->
-      <div class="group rounded-2xl overflow-hidden project-card">
-       <div class="aspect-video flex items-center justify-center" style="background: linear-gradient(135deg, #198754, #ffc107); color: rgba(255, 255, 255, 0.6);"><i data-lucide="monitor" class="w-12 h-12"></i>
-       </div>
-       <div class="p-6" style="background-color: #ffffff;">
-        <h3 class="font-bold mb-2" style="color: #212529;">Project Title</h3>
-        <p class="text-sm" style="color: #495057;">Dashboard</p>
+        <a href="https://foreveryoung.xugarsoft.com/index.php" target="_blank" alternative="Forever Young Supplements Site"><h3 class="font-bold mb-2" style="color: #212529;">Forever Young Supplements</h3></a>
+        <b><p class="text-sm" style="color: #495057;">Web Application</p></b><br>
+        <p>This site is an ecommerce sample for health vitamins and products. This demo-site was done with PHP/MySQL and added AI Agent powered by BotPenguin.</p>
        </div>
       </div>
+      
+      <!-- Project 2 -->
+      <div class="group rounded-2xl overflow-hidden project-card">
+        <div class="aspect-video flex items-center justify-center" style="background: linear-gradient(135deg, #673ab7, #0dcaf0); color: rgba(255, 255, 255, 0.6);">
+          <!-- <i data-lucide="layers" class="w-12 h-12"></i> -->
+          <img class="img-fluid" src="./assets/images/PPScreen.png" alt="Policies and Procedures Site" />
+        </div>
+        <div class="p-6" style="background-color: #ffffff;">
+          <a href="http://pp.xugarsoft.com/" target="new" alternative="Policy and Procedures Site"><h3 class="font-bold mb-2" style="color: #212529;">Policies and Procedures Library</h3></a>
+          <b><p class="text-sm" style="color: #495057;">Web Application</p></b><br>
+          <p>This site is a library that house policies and procedures for users to find content quick and easy. This demo-site was built with WordPress.</p>
+        </div>
+      </div>
+      
+      <!-- Project 3 -->
+      <div class="group rounded-2xl overflow-hidden project-card">
+       <div class="aspect-video flex items-center justify-center" style="background: linear-gradient(135deg, #198754, #ffc107); color: rgba(255, 255, 255, 0.6);">
+        <!-- <i data-lucide="monitor" class="w-12 h-12"></i> -->
+      <img class="img-fluid" src="./assets/images/FileReview.PNG" alt="File Review Application" />
+       </div>
+       <div class="p-6" style="background-color: #ffffff;">
+        <h3 class="font-bold mb-2" style="color: #212529;">File Review Application</h3>
+        <b><p class="text-sm" style="color: #495057;">Web Applciation</p></b><br>
+        <p>The File Review Application is an system designed to perform internal file audits. This application was originally completed as desktop applciation in Access and SQL database. Web Application is in progress.</p>
+       </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="group rounded-2xl overflow-hidden project-card">
+       <div class="aspect-video flex items-center justify-center" style="background: linear-gradient(135deg, #512da8, #673ab7); color: rgba(255, 255, 255, 0.6);">
+        <!-- <i data-lucide="layout" class="w-12 h-12"></i> -->
+       <img class="img-fluid" src="./assets/images/ApLibrary.png" alt="AP Library" />
+       </div>
+       <div class="p-6" style="background-color: #ffffff;">
+        <h3 class="font-bold mb-2" style="color: #212529;">Forms and Directives Library</h3>
+        <b><p class="text-sm" style="color: #495057;">Web Application</p></b><br>
+        <p>These libraries were designed to assist users to find forms and directives easily, the sites were designed with php and added AI Agents to improve the user experience.</p>
+       </div>
+      </div>
+
      </div>
     </div>
   </section>
@@ -135,27 +190,27 @@ include __DIR__ . '/templates/header.php';
         <div class="flex items-center gap-2 mb-3"><span class="text-xs font-semibold px-3 py-1 rounded-full" style="background-color: rgba(81, 45, 168, 0.1); color: #512da8;">Technology</span> <span class="text-xs" style="color: #4F5663;">5 min read</span>
         </div>
         <h3 class="text-lg font-bold mb-2" style="color: #212529;">The Future of Web Development</h3>
-        <p class="text-sm leading-relaxed mb-4" style="color: #495057;">Explore emerging trends and technologies shaping the web development landscape.</p><a href="#" class="text-sm font-semibold inline-flex items-center gap-2 transition hover:gap-3" style="color: #512da8;"> Read More <i data-lucide="arrow-right" class="w-4 h-4"></i> </a>
+        <p class="text-sm leading-relaxed mb-4" style="color: #495057;">As technology advances, web developers will inevitably find new and innovative ways to create applications. To succeed as a developer, you'll want to anticipate these trends and be one of the first to implement useful features. However, you may not know what to expect going into the new year.</p><a href="https://codeless.co/web-development-trends/" target="_blank" class="text-sm font-semibold inline-flex items-center gap-2 transition hover:gap-3" style="color: #512da8;"> Read More <i data-lucide="arrow-right" class="w-4 h-4"></i> </a>
        </div>
       </div><!-- Blog Card 2 -->
       <div class="rounded-2xl overflow-hidden transition hover:shadow-lg" style="background-color: #ffffff; border: 1px solid #e9ecef;">
        <div class="aspect-video flex items-center justify-center" style="background: linear-gradient(135deg, #673ab7, #0dcaf0); color: rgba(255, 255, 255, 0.6);"><i data-lucide="zap" class="w-12 h-12"></i>
        </div>
        <div class="p-6">
-        <div class="flex items-center gap-2 mb-3"><span class="text-xs font-semibold px-3 py-1 rounded-full" style="background-color: rgba(103, 58, 183, 0.1); color: #673ab7;">Performance</span> <span class="text-xs" style="color: #4F5663;">8 min read</span>
+        <div class="flex items-center gap-2 mb-3"><span class="text-xs font-semibold px-3 py-1 rounded-full" style="background-color: rgba(103, 58, 183, 0.1); color: #673ab7;">Development</span> <span class="text-xs" style="color: #4F5663;">8 min read</span>
         </div>
-        <h3 class="text-lg font-bold mb-2" style="color: #212529;">Optimizing Application Performance</h3>
-        <p class="text-sm leading-relaxed mb-4" style="color: #495057;">Best practices for building faster, more efficient applications for better user experience.</p><a href="#" class="text-sm font-semibold inline-flex items-center gap-2 transition hover:gap-3" style="color: #673ab7;"> Read More <i data-lucide="arrow-right" class="w-4 h-4"></i> </a>
+        <h3 class="text-lg font-bold mb-2" style="color: #212529;">Staying Focused and Productive</h3>
+        <p class="text-sm leading-relaxed mb-4" style="color: #495057;">Discover effective techniques to stay focused and productive as a web developer. Learn how to prioritize tasks, manage distractions, and optimize your workflow for maximum efficiency. Boost your productivity and achieve your goals in the fast-paced world of web development.</p><a href="https://arwd.ca/staying-focused-and-productive-techniques-for-web-developers/#google_vignette" target="_blank" class="text-sm font-semibold inline-flex items-center gap-2 transition hover:gap-3" style="color: #673ab7;"> Read More <i data-lucide="arrow-right" class="w-4 h-4"></i> </a>
        </div>
       </div><!-- Blog Card 3 -->
       <div class="rounded-2xl overflow-hidden transition hover:shadow-lg" style="background-color: #ffffff; border: 1px solid #e9ecef;">
        <div class="aspect-video flex items-center justify-center" style="background: linear-gradient(135deg, #198754, #ffc107); color: rgba(255, 255, 255, 0.6);"><i data-lucide="shield" class="w-12 h-12"></i>
        </div>
        <div class="p-6">
-        <div class="flex items-center gap-2 mb-3"><span class="text-xs font-semibold px-3 py-1 rounded-full" style="background-color: rgba(25, 135, 84, 0.1); color: #198754;">Security</span> <span class="text-xs" style="color: #4F5663;">6 min read</span>
+        <div class="flex items-center gap-2 mb-3"><span class="text-xs font-semibold px-3 py-1 rounded-full" style="background-color: rgba(25, 135, 84, 0.1); color: #198754;">Security</span> <span class="text-xs" style="color: #4F5663;">10 min read</span>
         </div>
-        <h3 class="text-lg font-bold mb-2" style="color: #212529;">Security Best Practices</h3>
-        <p class="text-sm leading-relaxed mb-4" style="color: #495057;">Essential security measures to protect your applications and user data effectively.</p><a href="#" class="text-sm font-semibold inline-flex items-center gap-2 transition hover:gap-3" style="color: #198754;"> Read More <i data-lucide="arrow-right" class="w-4 h-4"></i> </a>
+        <h3 class="text-lg font-bold mb-2" style="color: #212529;">Cybersecurity</h3>
+        <p class="text-sm leading-relaxed mb-4" style="color: #495057;">4 Things You Can Do To Keep Yourself Cyber Safe.</p><a href="https://www.cisa.gov/news-events/news/4-things-you-can-do-keep-yourself-cyber-safe" target="_blank" class="text-sm font-semibold inline-flex items-center gap-2 transition hover:gap-3" style="color: #198754;"> Read More <i data-lucide="arrow-right" class="w-4 h-4"></i> </a>
        </div>
       </div>
      </div>

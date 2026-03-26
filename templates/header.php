@@ -53,17 +53,39 @@
         <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
     </head>
  
- <body class="h-full">
-  <div id="app" class="h-full w-full overflow-auto" style="background-color: #f8f9fa;">
-    
+<body class="h-full">
+    <div id="app" class="h-full w-full overflow-auto" style="background-color: #f8f9fa;">
   <!-- Navigation -->
-   <nav id="nav-section" class="w-full border-b" style="background-color: #ffffff; border-color: #dee2e6;">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-     <div class="flex items-center gap-3">
-      <div class="w-10 h-10 rounded flex items-center justify-center app-gradient-accent" style="color: #ffffff;"><i data-lucide="box" class="w-6 h-6"></i>
-      </div><span id="company-name" class="text-xl font-bold" style="color: #512da8;">Xugarsoft</span>
-     </div>
-     <div class="hidden md:flex items-center gap-8"><a href="#services" class="text-sm font-medium hover:text-opacity-70 transition" style="color: #495057;">Services</a> <a href="#about" class="text-sm font-medium hover:text-opacity-70 transition" style="color: #495057;">About</a> <a href="#portfolio" class="text-sm font-medium hover:text-opacity-70 transition" style="color: #495057;">Portfolio</a> <a href="#blog" class="text-sm font-medium hover:text-opacity-70 transition" style="color: #495057;">Blog</a> <a href="#contact" class="text-sm font-medium hover:text-opacity-70 transition" style="color: #495057;">Contact</a>
-     </div><button id="cta-nav" class="px-5 py-2 rounded-lg text-sm font-semibold transition hover:shadow-lg" style="background-color: #512da8; color: #ffffff;"> Get Started </button>
+<nav id="nav-section" class="site-nav">
+  <div class="nav-container">
+    
+    <a href="#hero-section" class="brand">
+      <img src="./assets/images/NewIcon.png" alt="Xugarsoft logo" class="brand-logo">
+      <span class="brand-text">Xugarsoft</span>
+    </a>
+
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="nav-links desktop-nav">
+      <a href="#services" class="nav-link">Experience</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#portfolio" class="nav-link">Portfolio</a>
+      <a href="#blog" class="nav-link">Blog</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </div>
-   </nav>
+
+    <a href="#contact" id="cta-nav" class="nav-cta">Get Started</a>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#services" class="mobile-link">Experience</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#portfolio" class="mobile-link">Portfolio</a>
+    <a href="#blog" class="mobile-link">Blog</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+</nav>
