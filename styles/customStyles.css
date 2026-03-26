@@ -149,7 +149,8 @@
 }
 
 #hero-section {
-  color: #fff;
+  color: #fff img;
+  color-width: 15%;
 }
 
 #cta-hero {

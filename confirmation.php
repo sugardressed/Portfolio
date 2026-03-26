@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 |--------------------------------------------------------------------------
 */
 if (!empty($_SERVER['HTTP_REFERER'])) {
-    if (strpos($_SERVER['HTTP_REFERER'], 'elizabeth.xugarsoft.com/contact.php') === false) {
+    if (strpos($_SERVER['HTTP_REFERER'], 'http://elizabeth.xugarsoft.com/index.php') === false) {
         die('Invalid origin.');
     }
 }

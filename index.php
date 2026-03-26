@@ -126,8 +126,8 @@ include __DIR__ . '/templates/header.php';
        <img class="img-fluid" src="./assets/images/foreveryoungpage.png" alt="Forever Young Supplements Site" />
        </div>
        <div class="p-6" style="background-color: #ffffff;">
-        <a href="https://foreveryoung.xugarsoft.com/index.php" target="_blank" alternative="Forever Young Supplements Site"><h3 class="font-bold mb-2" style="color: #212529;">Forever Young Supplements</h3></a>
-        <b><p class="text-sm" style="color: #495057;">Web Application</p></b><br>
+        <a href="https://foreveryoung.xugarsoft.com/index.php" target="_blank" aria-label="Forever Young Supplements Site"><h3 class="font-bold mb-2" style="color: #212529;">Forever Young Supplements</h3></a>
+        <p class="text-sm" style="color: #495057;"><b>Web Application</b></p><br>
         <p>This site is an ecommerce sample for health vitamins and products. This demo-site was done with PHP/MySQL and added AI Agent powered by BotPenguin.</p>
        </div>
       </div>
@@ -139,8 +139,8 @@ include __DIR__ . '/templates/header.php';
           <img class="img-fluid" src="./assets/images/PPScreen.png" alt="Policies and Procedures Site" />
         </div>
         <div class="p-6" style="background-color: #ffffff;">
-          <a href="http://pp.xugarsoft.com/" target="new" alternative="Policy and Procedures Site"><h3 class="font-bold mb-2" style="color: #212529;">Policies and Procedures Library</h3></a>
-          <b><p class="text-sm" style="color: #495057;">Web Application</p></b><br>
+          <a href="http://pp.xugarsoft.com/" target="new" aria-label="Policy and Procedures Site"><h3 class="font-bold mb-2" style="color: #212529;">Policies and Procedures Library</h3></a>
+          <p class="text-sm" style="color: #495057;"><b>Web Application</b></p><br>
           <p>This site is a library that house policies and procedures for users to find content quick and easy. This demo-site was built with WordPress.</p>
         </div>
       </div>
@@ -153,7 +153,7 @@ include __DIR__ . '/templates/header.php';
        </div>
        <div class="p-6" style="background-color: #ffffff;">
         <h3 class="font-bold mb-2" style="color: #212529;">File Review Application</h3>
-        <b><p class="text-sm" style="color: #495057;">Web Applciation</p></b><br>
+        <p class="text-sm" style="color: #495057;"><b>Web Applciation</b></p><br>
         <p>The File Review Application is an system designed to perform internal file audits. This application was originally completed as desktop applciation in Access and SQL database. Web Application is in progress.</p>
        </div>
       </div>
@@ -166,7 +166,7 @@ include __DIR__ . '/templates/header.php';
        </div>
        <div class="p-6" style="background-color: #ffffff;">
         <h3 class="font-bold mb-2" style="color: #212529;">Forms and Directives Library</h3>
-        <b><p class="text-sm" style="color: #495057;">Web Application</p></b><br>
+        <p class="text-sm" style="color: #495057;"><b>Web Application</b></p><br>
         <p>These libraries were designed to assist users to find forms and directives easily, the sites were designed with php and added AI Agents to improve the user experience.</p>
        </div>
       </div>
@@ -298,13 +298,17 @@ include __DIR__ . '/templates/header.php';
       <input type="hidden" name="form_time" value="<?php echo time(); ?>">
       <!-- Submit button -->
       <div class="d-grid">
-      <button class="btn btn-primary btn-lg">   
+      <!-- <button class="btn btn-primary btn-lg">   
       <input
         id="submitButton"
         type="submit"
         value="Send Message"
         >
-      </button>
+      </button> -->
+<button id="submitButton" type="submit" class="btn btn-primary btn-lg">
+  Send Message
+</button>
+
       </div>
       </form>
       </div>
