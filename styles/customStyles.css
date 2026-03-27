@@ -23,16 +23,14 @@
   gap: 0.75rem;
   text-decoration: none;
 }
-
-.brand-logo {
+.brand .brand-logo {
   width: 42px;
   height: 42px;
   -o-object-fit: contain;
      object-fit: contain;
   display: block;
 }
-
-.brand-text {
+.brand .brand-text {
   font-size: 1.25rem;
   font-weight: 700;
   color: #673ab7;
@@ -164,6 +162,191 @@
   box-shadow: 0 8px 20px rgba(81, 45, 168, 0.2);
 }
 
+/* =========================
+   PROJECT CARD
+========================= */
+.project-card {
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  max-width: 700px;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.14);
+}
+
+/* =========================
+   CAROUSEL AREA
+========================= */
+.project-carousel {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #512da8, #673ab7);
+  pointer-events: auto;
+}
+
+.project-carousel-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.project-carousel-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0;
+  transform: scale(1);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
+}
+
+.project-carousel-image.active {
+  opacity: 1;
+}
+
+.project-carousel:hover .project-carousel-image.active {
+  transform: scale(1.04);
+}
+
+/* =========================
+   ARROWS
+========================= */
+.project-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.45);
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.project-carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.65);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.project-carousel-btn.prev {
+  left: 14px;
+}
+
+.project-carousel-btn.next {
+  right: 14px;
+}
+
+/* =========================
+   DOTS
+========================= */
+.project-carousel-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  gap: 8px;
+}
+
+.project-carousel-dot {
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.project-carousel-dot:hover {
+  transform: scale(1.15);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.project-carousel-dot.active {
+  background: #ffffff;
+}
+
+/* =========================
+   CONTENT AREA
+========================= */
+.project-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  z-index: 5;
+}
+
+.project-content {
+  padding: 1.5rem;
+  background-color: #ffffff;
+  transition: background-color 0.2s ease;
+  position: relative;
+  z-index: 10;
+}
+
+.project-card-link:hover .project-content {
+  background-color: #f8f9fa;
+}
+
+.project-title {
+  margin: 0 0 0.5rem 0;
+  color: #512da8;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.project-title:hover {
+  color: #38bdf8;
+}
+
+.project-type {
+  margin: 0 0 1rem 0;
+  color: #495057;
+  font-size: 0.95rem;
+}
+
+.project-description {
+  margin: 0;
+  color: #495057;
+  line-height: 1.6;
+  font-size: 0.97rem;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .project-carousel {
+    height: 180px;
+  }
+  .project-content {
+    padding: 1.1rem;
+  }
+  .project-title {
+    font-size: 1.1rem;
+  }
+  .project-carousel-btn {
+    width: 38px;
+    height: 38px;
+  }
+}
 .contact-card {
   padding: 2rem;
   border-radius: 1rem;
@@ -206,6 +389,7 @@
 
 .sr-only {
   position: absolute;
+  color: #D6D6D6;
   width: 1px;
   height: 1px;
   padding: 0;
@@ -236,8 +420,8 @@
 footer a {
   color: #fff;
 }
-footer h4 {
-  color: #fff;
+footer h3 {
+  color: #e040fb;
   font-weight: 500;
   margin-bottom: 1.5rem !important;
 }
@@ -250,6 +434,12 @@ footer li a {
   color: #BDBDBD;
 }
 footer li a:hover {
+  color: #e040fb;
+}
+footer .brand .brand-text {
+  color: #fff;
+}
+footer .brand-text:hover {
   color: #e040fb;
 }
 footer .text-gradient {

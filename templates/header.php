@@ -32,8 +32,8 @@
         <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
     </head>
  
-<body class="h-full">
-    <div id="app" class="h-full w-full overflow-auto" style="background-color: #f8f9fa;">
+<body class="min-h-screen">
+    <div id="app" class="w-full">
   <!-- Navigation -->
 <nav id="nav-section" class="site-nav">
   <div class="nav-container">

@@ -54,7 +54,7 @@ include __DIR__ . '/templates/header.php';
 
     <div class="max-w-6xl mx-auto">
      <div class="text-center mb-16">
-      <p class="text-sm font-semibold uppercase tracking-wider mb-3" style="color: #512da8;">What is my experience</p>
+      <p class="text-sm font-semibold uppercase tracking-wider mb-3" style="color: #512da8;">What I do</p>
       <h2 id="services-title" class="text-3xl md:text-4xl font-bold" style="color: #212529;">Experience</h2>
      </div>
      <div class="grid md:grid-cols-3 gap-8"><!-- Service Card 1 -->
@@ -97,11 +97,11 @@ include __DIR__ . '/templates/header.php';
       <p class="leading-relaxed" style="color: #64748b;">I help businesses grow by streamlining operations, eliminating inefficiencies, and transforming complex processes into simple, effective solutions. Using innovative strategies and the latest technology tools, I create systems that save time, reduce effort, and drive sustainable growth.</p>
       <div class="grid grid-cols-2 gap-6 pt-4">
        <div class="p-4 rounded-xl wireframe-box" style="border-color: #e2e8f0;">
-        <p class="text-3xl font-bold" style="color: #094CB9;">150+</p>
+        <h3 class="text-3xl font-bold" style="color: #094CB9;">150+</h3>
         <p class="text-sm" style="color: #64748b;">Projects Completed</p>
        </div>
        <div class="p-4 rounded-xl wireframe-box" style="border-color: #e2e8f0;">
-        <p class="text-3xl font-bold" style="color: #0A8059;">50+</p>
+        <h3 class="text-3xl font-bold" style="color: #0A8059;">50+</h3>
         <p class="text-sm" style="color: #64748b;">Happy Clients</p>
        </div>
       </div>
@@ -119,20 +119,65 @@ include __DIR__ . '/templates/header.php';
      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       
      
-     <!-- Project 1 -->
-     <div class="group rounded-2xl overflow-hidden project-card">
-       <div class="aspect-video flex items-center justify-center" style="background: linear-gradient(135deg, #512da8, #673ab7); color: rgba(255, 255, 255, 0.6);">
-        <!-- <i data-lucide="layout" class="w-12 h-12"></i> -->
-       <img class="img-fluid" src="./assets/images/foreveryoungpage.png" alt="Forever Young Supplements Site" />
-       </div>
-       <div class="p-6" style="background-color: #ffffff;">
-        <a href="https://foreveryoung.xugarsoft.com/index.php" target="_blank" aria-label="Forever Young Supplements Site"><h3 class="font-bold mb-2" style="color: #212529;">Forever Young Supplements</h3></a>
-        <p class="text-sm" style="color: #495057;"><b>Web Application</b></p><br>
-        <p>This site is an ecommerce sample for health vitamins and products. This demo-site was done with PHP/MySQL and added AI Agent powered by BotPenguin.</p>
-       </div>
+     <!-- Project 1 UPDATED-->
+    <div class="project-card rounded-2xl overflow-hidden">
+    <!-- Image / Carousel Area -->
+    <div class="project-carousel" data-interval="3500">
+      <div class="project-carousel-track">
+        <img
+          src="./assets/images/foreveryoungpage.png"
+          alt="Forever Young Supplements homepage"
+          class="project-carousel-image active"
+        >
+        <img
+          src="./assets/images/foreveryoungpage1.png"
+          alt="Forever Young Supplements products page"
+          class="project-carousel-image"
+        >
+        <img
+          src="./assets/images/foreveryoungpage2.png"
+          alt="Forever Young Supplements AI Bot Agent sample"
+          class="project-carousel-image"
+        >
+        <img
+          src="./assets/images/foreveryoungpage3.png"
+          alt="Forever Young Supplements Check Out page"
+          class="project-carousel-image"
+        >
       </div>
-      
-      <!-- Project 2 -->
+      <!-- Carousel Buttons -->
+      <button class="project-carousel-btn prev" type="button" aria-label="Previous image">
+        &#10094;
+      </button>
+      <button class="project-carousel-btn next" type="button" aria-label="Next image">
+        &#10095;
+      </button>
+      <div class="project-carousel-dots" aria-label="Carousel navigation">
+        <button class="project-carousel-dot active" type="button" aria-label="Go to image 1"></button>
+        <button class="project-carousel-dot" type="button" aria-label="Go to image 2"></button>
+        <button class="project-carousel-dot" type="button" aria-label="Go to image 3"></button>
+      </div>
+    </div>
+    <!-- Clickable Content Bottom Area Only -->
+    <a
+      href="https://foreveryoung.xugarsoft.com/index.php"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="project-card-link"
+      aria-label="Open Forever Young Supplements website in a new tab"
+    >
+      <div class="project-content">
+        <h3 class="project-title">Forever Young Supplements</h3>
+        <p class="project-type"><strong>Web Application</strong></p>
+        <p class="project-description">
+          This site is an ecommerce sample for health vitamins and products.
+          This demo-site was built with PHP/MySQL and includes an AI Agent powered by BotPenguin.
+        </p>
+      </div>
+    </a>
+    </div>
+
+    <!-- Project 2 -->
       <div class="group rounded-2xl overflow-hidden project-card">
         <div class="aspect-video flex items-center justify-center" style="background: linear-gradient(135deg, #673ab7, #0dcaf0); color: rgba(255, 255, 255, 0.6);">
           <!-- <i data-lucide="layers" class="w-12 h-12"></i> -->
@@ -317,6 +362,7 @@ include __DIR__ . '/templates/header.php';
    <!-- Footer -->
     <script src="./scripts/contactV.js"></script>
     <script src="./scripts/navigation.js"></script>
+    <script src="./scripts/projectsCard.js"></script>
 <?php 
 include __DIR__ . '/templates/footer.html';
 ?>  

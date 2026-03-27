@@ -1,6 +1,6 @@
 <?php
 define('TITLE', 'Elizabeth | Contact Confirmation');
-include('templates/header.php');
+include __DIR__ . '/templates/header.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 |--------------------------------------------------------------------------
 */
 if (!empty($_SERVER['HTTP_REFERER'])) {
-    if (strpos($_SERVER['HTTP_REFERER'], 'http://elizabeth.xugarsoft.com/index.php') === false) {
+    if (strpos($_SERVER['HTTP_REFERER'], 'http://elizabeth.xugarsoft.com/') === false) {
         die('Invalid origin.');
     }
 }
@@ -167,6 +167,8 @@ $mailSent = mail($to, $subject, $body, $headers);
     </div>
 </section>
 
-<?php
-include('templates/footer.html');
-?>
+    <script src="./scripts/contactV.js"></script>
+    <script src="./scripts/navigation.js"></script>
+<?php 
+include __DIR__ . '/templates/footer.html';
+?> 
