@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 |--------------------------------------------------------------------------
 */
 if (!empty($_SERVER['HTTP_REFERER'])) {
-    if (strpos($_SERVER['HTTP_REFERER'], 'http://elizabeth.xugarsoft.com/') === false) {
+    if (strpos($_SERVER['HTTP_REFERER'], 'https://elizabeth.xugarsoft.com/') === false) {
         die('Invalid origin.');
     }
 }
@@ -148,14 +148,14 @@ $mailSent = mail($to, $subject, $body, $headers);
         <div class="bg-light rounded-4 py-5 px-4 px-md-5 text-center">
             <?php if ($mailSent): ?>
                 <div class="contactConf">
-                    <h2>Thank You for Your Interest!</h2>
+                    <h2>Thank You for Your Interest, <?php echo $fName; ?>!</h2>
                     <p>Your message has been sent successfully. I will get back to you soon.</p>
-                    <p>You will be redirected to the home page in 10 seconds.</p>
+                    <p>You will be redirected to the home page in 5 seconds.</p>
                 </div>
                 <script>
                     setTimeout(function () {
                         window.location.href = "index.php";
-                    }, 10000);
+                    }, 5000);
                 </script>
             <?php else: ?>
                 <div class="contactConf">

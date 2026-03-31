@@ -28,8 +28,8 @@
         <!-- TAILWIND STYES -->
         <script src="https://cdn.tailwindcss.com/3.4.17"></script>
         <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
-        <script src="/_sdk/element_sdk.js"></script>
-        <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+        <!-- <script src="/_sdk/element_sdk.js"></script>
+        <script src="/_sdk/data_sdk.js" type="text/javascript"></script> -->
     </head>
  
 <body class="min-h-screen">
@@ -57,7 +57,7 @@
       <a href="#contact" class="nav-link">Contact</a>
     </div>
 
-    <a href="#contact" id="cta-nav" class="nav-cta">Get Started</a>
+    <a href="#contact" id="cta-nav" class="nav-cta">Start Now</a>
   </div>
 
   <div class="mobile-menu" id="mobile-menu">
