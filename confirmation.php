@@ -154,7 +154,7 @@ $mailSent = mail($to, $subject, $body, $headers);
                 </div>
                 <script>
                     setTimeout(function () {
-                        window.location.href = "index.php";
+                        window.location.href = "/";
                     }, 5000);
                 </script>
             <?php else: ?>

@@ -4,9 +4,18 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} !^localhost$ [NC]
 RewriteCond %{HTTP_HOST} !^127\.0\.0\.1$ [NC]
 
-# Handle both Apache + proxy environments
+# Force HTTPS
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{ENV:HTTPS} !on
-
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 #RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=302]
+
+# Redirect /index.php to /
+RewriteCond %{THE_REQUEST} \s/+index\.php[\s?] [NC]
+RewriteRule ^index\.php$ / [L,R=301]
+
+# Internally rewrite clean URLs to .php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L]

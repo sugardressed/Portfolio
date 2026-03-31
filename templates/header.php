@@ -1,3 +1,95 @@
+<?php
+	$dbh = new PDO(
+    "mysql:host=localhost;dbname=elizabethr_xugarsoft",
+    "elizabethr_eramirez",
+    "eramirezdemo"
+);
+
+$ip = $_SERVER['REMOTE_ADDR'] ?? '';
+
+// Optional: handle proxy/CDN later if needed
+$url = "http://ip-api.com/json/" . urlencode($ip) . "?fields=status,message,country,region,city,zip,lat,lon,org,timezone,isp,as";
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+
+$resp = curl_exec($ch);
+
+if ($resp === false) {
+    die('cURL error: ' . curl_error($ch));
+}
+
+$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+curl_close($ch);
+
+if ($httpCode !== 200) {
+    die('IP API request failed. HTTP code: ' . $httpCode);
+}
+
+$obj = json_decode($resp, true);
+
+if (!$obj) {
+    die('Invalid JSON response from IP API.');
+}
+
+if (($obj['status'] ?? '') !== 'success') {
+    die('IP API error: ' . ($obj['message'] ?? 'Unknown error'));
+}
+
+$country  = $obj['country']  ?? '';
+$region   = $obj['region']   ?? '';
+$city     = $obj['city']     ?? '';
+$zip      = $obj['zip']      ?? '';
+$lat      = $obj['lat']      ?? null;
+$lng      = $obj['lon']      ?? null;
+$org      = $obj['org']      ?? '';
+$timezone = $obj['timezone'] ?? '';
+$isp      = $obj['isp']      ?? '';
+$address  = $obj['as']       ?? '';
+$pagename = $_SERVER['PHP_SELF'] ?? '';
+
+$sql = $dbh->prepare("
+    INSERT INTO portracker
+    (country, region, city, zip, lat, lng, isp, org, address, timezone, pagename, timestamp)
+    VALUES
+    (:country, :region, :city, :zip, :lat, :lng, :isp, :org, :address, :timezone, :pagename, NOW())
+");
+
+$success = $sql->execute([
+    ':country'  => $country,
+    ':region'   => $region,
+    ':city'     => $city,
+    ':zip'      => $zip,
+    ':lat'      => $lat,
+    ':lng'      => $lng,
+    ':isp'      => $isp,
+    ':org'      => $org,
+    ':address'  => $address,
+    ':timezone' => $timezone,
+    ':pagename' => $pagename
+]);
+
+if (!$success) {
+    $error = $sql->errorInfo();
+
+    $to = "sugardressed@gmail.com";
+    $subject = "Xugarsoft Portfolio - Tracking Insert Failed";
+
+    $message = "Tracking insert failed.\n\n";
+    $message .= print_r($error, true);
+
+    $headers = "From: no-reply@xugarsoft.com";
+
+    mail($to, $subject, $message, $headers);
+
+    error_log("DB Insert Failed: " . print_r($error, true));
+}
+
+?>
+
+
 <!doctype html>
 <html lang="en" class="h-full">
     <head>
