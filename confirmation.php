@@ -153,7 +153,7 @@ $mailSent = mail($to, $subject, $body, $headers);
                     <p>You will be redirected to the home page in 5 seconds.</p>
                 </div>
                 <script>
-                    setTimeout(function () {
+                    setTimeout(function() {
                         window.location.href = "/";
                     }, 5000);
                 </script>
@@ -167,8 +167,8 @@ $mailSent = mail($to, $subject, $body, $headers);
     </div>
 </section>
 
-    <script src="./scripts/contactV.js"></script>
-    <script src="./scripts/navigation.js"></script>
-<?php 
+<script src="./scripts/contactV.js"></script>
+<script src="./scripts/navigation.js"></script>
+<?php
 include __DIR__ . '/templates/footer.html';
-?> 
+?>

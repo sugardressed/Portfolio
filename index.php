@@ -2,7 +2,6 @@
 include __DIR__ . '/templates/header.php';
 ?>
 <!-- Hero Section -->
-<!-- MAIN SECTIONS -->
 <section id="hero-section" class="w-full py-20 px-6 app-gradient-hero text-white">
   <!-- MOTION DEMO STARTS-->
   <div class="code-bg" aria-hidden="true">
@@ -79,7 +78,7 @@ include __DIR__ . '/templates/header.php';
     </div>
   </div>
 
-  
+
 </section>
 
 <!-- About Section -->
@@ -120,7 +119,7 @@ include __DIR__ . '/templates/header.php';
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-    <!-- Forever Young Supplements Project 1 -->
+      <!-- Forever Young Supplements Project 1 -->
       <div class="project-card rounded-2xl overflow-hidden">
         <!-- Image / Carousel Area -->
         <div class="project-carousel" data-interval="3500">
@@ -173,7 +172,7 @@ include __DIR__ . '/templates/header.php';
         </a>
       </div>
 
-    <!-- Policies and Procedures Library Project 2 -->
+      <!-- Policies and Procedures Library Project 2 -->
       <div class="project-card rounded-2xl overflow-hidden">
         <!-- Image / Carousel Area -->
         <div class="project-carousel" data-interval="3500">
@@ -225,7 +224,7 @@ include __DIR__ . '/templates/header.php';
         </a>
       </div>
 
-    <!-- File Review System Project3 -->
+      <!-- File Review System Project3 -->
       <div class="project-card rounded-2xl overflow-hidden">
         <!-- Image / Carousel Area -->
         <div class="project-carousel" data-interval="3500">
@@ -277,7 +276,7 @@ include __DIR__ . '/templates/header.php';
         </a>
       </div>
 
-    <!-- Forms and Directives Libraries Project 4 -->
+      <!-- Forms and Directives Libraries Project 4 -->
       <div class="project-card rounded-2xl overflow-hidden">
         <!-- Image / Carousel Area -->
         <div class="project-carousel" data-interval="3500">
@@ -329,7 +328,7 @@ include __DIR__ . '/templates/header.php';
         </a>
       </div>
 
-          <!-- Allison's Portfolio Project 5 -->
+      <!-- Allison's Portfolio Project 5 -->
       <div class="project-card rounded-2xl overflow-hidden">
         <!-- Image / Carousel Area -->
         <div class="project-carousel" data-interval="3500">
