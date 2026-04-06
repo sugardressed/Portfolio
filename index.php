@@ -31,8 +31,8 @@ include __DIR__ . '/templates/header.php';
       <h1 id="hero-title" class="text-4xl md:text-5xl font-bold leading-tight">Turning Ideas into Outcomes</h1>
       <p id="hero-subtitle" class="text-lg leading-relaxed">I craft innovative web solutions that transform businesses, driving growth and online presence.</p>
       <div class="flex flex-wrap gap-4 pt-4">
-        <a href="#about"><button id="cta-hero" class="px-8 py-3 rounded-lg font-semibold">Get Started </button> </a>
-        <a href="#portfolio"><button class="px-8 py-3 rounded-lg font-semibold transition border hover:bg-white hover:bg-opacity-10" style="border-color: #ffffff;color:#fff;"> Learn More </button></a>
+        <a href="#about" id="cta-hero" class="px-8 py-3 rounded-lg font-semibold">Get Started </a>
+        <a href="#portfolio" class="px-8 py-3 rounded-lg font-semibold transition border hover:bg-white hover:bg-opacity-10" style="border-color: #ffffff;color:#fff;"> Learn More</a>
       </div>
     </div>
     <!-- PICTURE -->
@@ -148,7 +148,7 @@ include __DIR__ . '/templates/header.php';
           <button class="project-carousel-btn next" type="button" aria-label="Next image">
             &#10095;
           </button>
-          <div class="project-carousel-dots" aria-label="Carousel navigation">
+          <div class="project-carousel-dots">
             <button class="project-carousel-dot active" type="button" aria-label="Go to image 1"></button>
             <button class="project-carousel-dot" type="button" aria-label="Go to image 2"></button>
             <button class="project-carousel-dot" type="button" aria-label="Go to image 3"></button>
@@ -201,7 +201,7 @@ include __DIR__ . '/templates/header.php';
           <button class="project-carousel-btn next" type="button" aria-label="Next image">
             &#10095;
           </button>
-          <div class="project-carousel-dots" aria-label="Carousel navigation">
+          <div class="project-carousel-dots">
             <button class="project-carousel-dot active" type="button" aria-label="Go to image 1"></button>
             <button class="project-carousel-dot" type="button" aria-label="Go to image 2"></button>
             <button class="project-carousel-dot" type="button" aria-label="Go to image 3"></button>
@@ -253,7 +253,7 @@ include __DIR__ . '/templates/header.php';
           <button class="project-carousel-btn next" type="button" aria-label="Next image">
             &#10095;
           </button>
-          <div class="project-carousel-dots" aria-label="Carousel navigation">
+          <div class="project-carousel-dots">
             <button class="project-carousel-dot active" type="button" aria-label="Go to image 1"></button>
             <button class="project-carousel-dot" type="button" aria-label="Go to image 2"></button>
             <button class="project-carousel-dot" type="button" aria-label="Go to image 3"></button>
@@ -305,7 +305,7 @@ include __DIR__ . '/templates/header.php';
           <button class="project-carousel-btn next" type="button" aria-label="Next image">
             &#10095;
           </button>
-          <div class="project-carousel-dots" aria-label="Carousel navigation">
+          <div class="project-carousel-dots">
             <button class="project-carousel-dot active" type="button" aria-label="Go to image 1"></button>
             <button class="project-carousel-dot" type="button" aria-label="Go to image 2"></button>
             <button class="project-carousel-dot" type="button" aria-label="Go to image 3"></button>
@@ -357,7 +357,7 @@ include __DIR__ . '/templates/header.php';
           <button class="project-carousel-btn next" type="button" aria-label="Next image">
             &#10095;
           </button>
-          <div class="project-carousel-dots" aria-label="Carousel navigation">
+          <div class="project-carousel-dots">
             <button class="project-carousel-dot active" type="button" aria-label="Go to image 1"></button>
             <button class="project-carousel-dot" type="button" aria-label="Go to image 2"></button>
             <button class="project-carousel-dot" type="button" aria-label="Go to image 3"></button>

@@ -417,6 +417,10 @@
   border-color: #673ab7;
 }
 
+footer {
+  background-color: #0f172a;
+  border-color: #334155;
+}
 footer a {
   color: #fff;
 }
