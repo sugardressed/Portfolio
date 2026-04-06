@@ -1,2 +1,6 @@
+*.log
+*.mp4
+*.env
+
 /templates/dbconnect.php
 /templates/curl.php
