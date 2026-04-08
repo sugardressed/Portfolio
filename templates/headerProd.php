@@ -93,7 +93,7 @@ if (!$success) {
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="Elizabeth's Portfolio">
+        <meta name="description" content="Portfolio of Elizabeth Ramirez, web developer and analyst, showcasing technical skills, project experience, and professional background.">
         <meta name="author" content="Elizabeth Web Development and Process Improvement">
         <title>        <?php //Print the page title.
             if (defined('TITLE')) { //Is the title defined?
