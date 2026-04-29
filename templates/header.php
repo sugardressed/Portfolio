@@ -55,8 +55,10 @@
       <a href="#blog" class="nav-link">Blog</a>
       <a href="#contact" class="nav-link">Contact</a>
     </div>
-
+    <div>
+    <a href="./assets/documents/Resume_Elizabeth_Ramirez.pdf" id="cta-nav" class="nav-cta" download>Resume</a>
     <a href="#contact" id="cta-nav" class="nav-cta">Start Now</a>
+    </div>
   </div>
 
   <div class="mobile-menu" id="mobile-menu">
