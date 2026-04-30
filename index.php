@@ -119,6 +119,59 @@ include __DIR__ . '/templates/header.php';
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
+     <!-- Program Integrity Project 0 -->
+      <div class="project-card rounded-2xl overflow-hidden">
+        <!-- Image / Carousel Area -->
+        <div class="project-carousel" data-interval="3500">
+          <div class="project-carousel-track">
+            <img
+              src="./assets/images/PIS1.png"
+              alt="Program Integrity login page"
+              class="project-carousel-image active">
+            <img
+              src="./assets/images/PIS2.png"
+              alt="Program Integrity Dashboard"
+              class="project-carousel-image">
+            <img
+              src="./assets/images/PIS3.png"
+              alt="Program Integrity Fraud Case List"
+              class="project-carousel-image">
+            <img
+              src="./assets/images/PIS4.png"
+              alt="Program Integrity Data Entry Form"
+              class="project-carousel-image">
+          </div>
+          <!-- Carousel Buttons -->
+          <button class="project-carousel-btn prev" type="button" aria-label="Previous image">
+            &#10094;
+          </button>
+          <button class="project-carousel-btn next" type="button" aria-label="Next image">
+            &#10095;
+          </button>
+          <div class="project-carousel-dots">
+            <button class="project-carousel-dot active" type="button" aria-label="Go to image 1"></button>
+            <button class="project-carousel-dot" type="button" aria-label="Go to image 2"></button>
+            <button class="project-carousel-dot" type="button" aria-label="Go to image 3"></button>
+          </div>
+        </div>
+        <!-- Clickable Content Bottom Area Only -->
+        <a
+          href="https://elizabeth.xugarsoft.com/PI_Demo/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="project-card-link"
+          aria-label="Open Program Integrity demo website in a new tab">
+          <div class="project-content">
+            <h3 class="project-title">Program Integrity System</h3>
+            <p class="project-type"><strong>Web Application</strong></p>
+            <p class="project-description">
+              This application will track the program integrity concerns, the user will navigate thru the areas of concern, enter the cases and supporting documentation. This link is a proof of concept, the production version is built in PHP8+/HTML5/CSS3-SASS/JS and SQL Server database.<br>Watch the video to see more details about the process.
+            </p>
+          </div>
+        </a>
+      </div>
+
+
       <!-- Forever Young Supplements Project 1 -->
       <div class="project-card rounded-2xl overflow-hidden">
         <!-- Image / Carousel Area -->
