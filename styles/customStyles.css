@@ -590,4 +590,24 @@ footer .connectIcons .social-icon:hover i {
 /* SQL keywords */
 .code-panel .sql {
   color: rgba(236, 72, 153, 0.45); /* soft pink */
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.portfolio-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
+
+/* Optional: subtle hover effect */
+.video-container:hover {
+  transform: scale(1.01);
+  transition: transform 0.3s ease;
 }/*# sourceMappingURL=customStyles.css.map */
