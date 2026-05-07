@@ -112,19 +112,36 @@ include __DIR__ . '/templates/header.php';
 <section id="about" class="w-full py-20 px-6" style="background-color: #f8fafc;">
     <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div class="relative">
-            <div class="aspect-video rounded-2xl wireframe-box flex items-center justify-center"
-                style="border-color: #cbd5e1; background-color: #e2e8f0;">
-                <div class="text-center space-y-4" style="color: #3F4B5F;">
-                                <div id="video-area" class="video-container">
-                                    <video class="portfolio-video" controls preload="metadata"
-                                        poster="./assets/images/Xugarsoft_logo_256x256.png">
-                                        <source src="./assets/video/Web_Cycle.mp4" type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
-                                </div>
-                    <!-- VIDEO ENDING SECTION -->
-                </div>
-            </div>
+
+<!-- VIDEO WRAPPER -->
+
+<div class="aspect-video rounded-2xl wireframe-box video-wrapper"
+    style="border-color: #cbd5e1; background-color: #e2e8f0;">
+
+    <div class="video-container">
+
+        <video
+            class="portfolio-video"
+            controls
+            controlsList="nodownload noplaybackrate"
+            disablePictureInPicture
+            preload="metadata"
+            poster="./assets/images/Xugarsoft_logo_256x256.png"
+            oncontextmenu="return false;">
+
+            <source src="./assets/video/Web_Cycle.mp4" type="video/mp4">
+
+            Your browser does not support the video tag.
+
+        </video>
+
+    </div>
+
+    <!-- VIDEO ENDING SECTION -->
+
+</div>
+
+<!-- VIDEO WRAPPER -->
         </div>
         <div class="space-y-6">
             <p class="text-sm font-semibold uppercase tracking-wider" style="color: #094CB9;">Who I Am</p>
