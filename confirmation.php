@@ -53,13 +53,13 @@ $fNameRaw   = trim($_POST['fName'] ?? '');
 $emailRaw   = trim($_POST['email'] ?? '');
 $phoneRaw   = trim($_POST['phone'] ?? '');
 $messageRaw = trim($_POST['message'] ?? '');
-
+$budgetRaw   = trim($_POST['budget'] ?? '');
 /*
 |--------------------------------------------------------------------------
 | 6. Required fields
 |--------------------------------------------------------------------------
 */
-if ($fNameRaw === '' || $emailRaw === '' || $phoneRaw === '' || $messageRaw === '') {
+if ($fNameRaw === '' || $emailRaw === '' || $phoneRaw === '' || $messageRaw === '' || $budgetRaw === '') {
     die('Missing information, please go back and try again.');
 }
 
@@ -111,6 +111,8 @@ $fName   = htmlspecialchars($fNameRaw, ENT_QUOTES, 'UTF-8');
 $email   = htmlspecialchars($emailRaw, ENT_QUOTES, 'UTF-8');
 $phone   = htmlspecialchars($phoneDigits, ENT_QUOTES, 'UTF-8');
 $message = nl2br(htmlspecialchars($messageRaw, ENT_QUOTES, 'UTF-8'));
+$budget  = htmlspecialchars($budgetRaw, ENT_QUOTES, 'UTF-8');
+
 
 /*
 |--------------------------------------------------------------------------
@@ -130,6 +132,7 @@ $body = "
     <p><strong>Name:</strong> {$fName}</p>
     <p><strong>Email:</strong> {$email}</p>
     <p><strong>Phone:</strong> {$phone}</p>
+    <p><strong>Budget:</strong> {$budget}</p>
     <p><strong>Message:</strong><br>{$message}</p>
 </body>
 </html>

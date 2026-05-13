@@ -113,35 +113,35 @@ include __DIR__ . '/templates/header.php';
     <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div class="relative">
 
-<!-- VIDEO WRAPPER -->
+            <!-- VIDEO WRAPPER -->
 
-<div class="aspect-video rounded-2xl wireframe-box video-wrapper"
-    style="border-color: #cbd5e1; background-color: #e2e8f0;">
+            <div class="aspect-video rounded-2xl wireframe-box video-wrapper"
+                style="border-color: #cbd5e1; background-color: #e2e8f0;">
 
-    <div class="video-container">
+                <div class="video-container">
 
-        <video
-            class="portfolio-video"
-            controls
-            controlsList="nodownload noplaybackrate"
-            disablePictureInPicture
-            preload="metadata"
-            poster="./assets/images/Xugarsoft_logo_256x256.png"
-            oncontextmenu="return false;">
+                    <video
+                        class="portfolio-video"
+                        controls
+                        controlsList="nodownload noplaybackrate"
+                        disablePictureInPicture
+                        preload="metadata"
+                        poster="./assets/images/Xugarsoft_logo_256x256.png"
+                        oncontextmenu="return false;">
 
-            <source src="./assets/video/Web_Cycle.mp4" type="video/mp4">
+                        <source src="./assets/video/Web_Cycle.mp4" type="video/mp4">
 
-            Your browser does not support the video tag.
+                        Your browser does not support the video tag.
 
-        </video>
+                    </video>
 
-    </div>
+                </div>
 
-    <!-- VIDEO ENDING SECTION -->
+                <!-- VIDEO ENDING SECTION -->
 
-</div>
+            </div>
 
-<!-- VIDEO WRAPPER -->
+            <!-- VIDEO WRAPPER -->
         </div>
         <div class="space-y-6">
             <p class="text-sm font-semibold uppercase tracking-wider" style="color: #094CB9;">Who I Am</p>
@@ -548,6 +548,22 @@ include __DIR__ . '/templates/header.php';
                         maxlength="14" inputmode="numeric" required>
                     <div class="invalid-feedback">Please enter a valid 10-digit phone number.</div>
                 </div>
+                <!-- Budget -->
+                <div class="form-group">
+                    <label for="budget" class="sr-only">Select your budget</label>
+
+                    <select class="contact-field" id="budget" name="budget" required>
+                        <option value="" selected disabled>Select your budget</option>
+                        <option value="under-500">Under $500</option>
+                        <option value="500-1000">$500 - $1,000</option>
+                        <option value="1000-2500">$1,000 - $2,500</option>
+                        <option value="2500-5000">$2,500 - $5,000</option>
+                        <option value="5000-plus">$5,000+</option>
+                    </select>
+
+                    <div class="invalid-feedback">Please select your budget.</div>
+                </div>
+
                 <!-- Message -->
                 <div class="form-group">
                     <label for="message" class="sr-only">Message</label>
@@ -564,13 +580,7 @@ include __DIR__ . '/templates/header.php';
                 <input type="hidden" name="form_time" value="<?php echo time(); ?>">
                 <!-- Submit button -->
                 <div class="d-grid">
-                    <!-- <button class="btn btn-primary btn-lg">   
-      <input
-        id="submitButton"
-        type="submit"
-        value="Send Message"
-        >
-      </button> -->
+
                     <button id="submitButton" type="submit" class="btn btn-primary btn-lg">
                         Send Message
                     </button>
