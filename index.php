@@ -187,13 +187,17 @@ include __DIR__ . '/templates/header.php';
                 <!-- Image / Carousel Area -->
                 <div class="project-carousel" data-interval="3500">
                     <div class="project-carousel-track">
-                        <img src="./assets/images/PIS1.png" alt="Program Integrity login page"
+                        <img src="./assets/images/ProgramIntegrity01.png" alt="Program Integrity login page"
                             class="project-carousel-image active">
-                        <img src="./assets/images/PIS2.png" alt="Program Integrity Dashboard"
+                        <img src="./assets/images/ProgramIntegrity02.png" alt="Program Integrity User ManagementDashboard"
                             class="project-carousel-image">
-                        <img src="./assets/images/PIS3.png" alt="Program Integrity Fraud Case List"
+                        <img src="./assets/images/ProgramIntegrity03.png" alt="Program Integrity Case Dashboard"
                             class="project-carousel-image">
-                        <img src="./assets/images/PIS4.png" alt="Program Integrity Data Entry Form"
+                        <img src="./assets/images/ProgramIntegrity04.png" alt="Program Integrity Cases List"
+                            class="project-carousel-image">
+                            <img src="./assets/images/ProgramIntegrity05.png" alt="Program Integrity Data Entry Form"
+                            class="project-carousel-image">
+                            <img src="./assets/images/ProgramIntegrity06.png" alt="Program Integrity Data Entry Form"
                             class="project-carousel-image">
                     </div>
                     <!-- Carousel Buttons -->
@@ -214,7 +218,7 @@ include __DIR__ . '/templates/header.php';
                     class="project-card-link" aria-label="Open Program Integrity demo website in a new tab">
                     <div class="project-content">
                         <h3 class="project-title">Program Integrity System</h3>
-                        <p class="project-type"><strong>Web Application</strong></p>
+                        <p class="project-type"><strong>Website</strong></p>
                         <p class="project-description">
                             This application will track the program integrity concerns, the user will navigate thru the
                             areas of concern, enter the cases and supporting documentation. This link is a proof of
@@ -258,7 +262,7 @@ include __DIR__ . '/templates/header.php';
                     class="project-card-link" aria-label="Open Forever Young Supplements website in a new tab">
                     <div class="project-content">
                         <h3 class="project-title">Forever Young Supplements</h3>
-                        <p class="project-type"><strong>Web Application</strong></p>
+                        <p class="project-type"><strong>Ecommerce Website</strong></p>
                         <p class="project-description">
                             This site is an ecommerce sample for health vitamins and products.
                             This demo-site was built with PHP/MySQL and includes an AI Agent powered by BotPenguin.
@@ -299,7 +303,7 @@ include __DIR__ . '/templates/header.php';
                     aria-label="Open Policies and Procedures Library website in a new tab">
                     <div class="project-content">
                         <h3 class="project-title">Policies and Procedures Library</h3>
-                        <p class="project-type"><strong>Web Application</strong></p>
+                        <p class="project-type"><strong>WordPress Website</strong></p>
                         <p class="project-description">
                             This site is a library that house policies and procedures for users to find content quick
                             and easy. This demo-site was built with WordPress.
@@ -346,7 +350,7 @@ include __DIR__ . '/templates/header.php';
                     aria-label="Open File Review System website in a new tab">
                     <div class="project-content">
                         <h3 class="project-title">File Review System</h3>
-                        <p class="project-type"><strong>Desktop to Web Application</strong></p>
+                        <p class="project-type"><strong>Desktop to Website</strong></p>
                         <p class="project-description">
                             This is a desktop application in the process of web application, it is a system for quality
                             assurance and file review. Currently built in Access and SQL database.
@@ -360,13 +364,17 @@ include __DIR__ . '/templates/header.php';
                 <!-- Image / Carousel Area -->
                 <div class="project-carousel" data-interval="3500">
                     <div class="project-carousel-track">
-                        <img src="./assets/images/ApLibrary.png" alt="Forms Home Page"
+                        <img src="./assets/images/PP01.png" alt="Policies Library Homepage"
                             class="project-carousel-image active">
-                        <img src="./assets/images/ApLibrary1.png" alt="Forms Catalog List"
+                        <img src="./assets/images/PP02.png" alt="Policies Search Engine"
                             class="project-carousel-image">
-                        <img src="./assets/images/ApDirectives.png" alt="Directives Library Homepage"
+                        <img src="./assets/images/Letters01.png" alt="Printout Letters System"
                             class="project-carousel-image">
-                        <img src="./assets/images/ApDirectives1.png" alt="Directives Library List"
+                        <img src="./assets/images/LearningCenter01.png" alt="Learning Center Hub"
+                            class="project-carousel-image">
+                             <img src="./assets/images/Email01.png" alt="Email Templates Library Search Engine"
+                            class="project-carousel-image">
+                             <img src="./assets/images/Email02.png" alt="Email Templates Library"
                             class="project-carousel-image">
                     </div>
                     <!-- Carousel Buttons -->
@@ -386,8 +394,8 @@ include __DIR__ . '/templates/header.php';
                 <a href="http://pp.xugarsoft.com/" target="_blank" rel="noopener noreferrer" class="project-card-link"
                     aria-label="Open Forms and Directives Library website in a new tab">
                     <div class="project-content">
-                        <h3 class="project-title">Forms and Directives Library</h3>
-                        <p class="project-type"><strong>Web Application</strong></p>
+                        <h3 class="project-title">Libraries</h3>
+                        <p class="project-type"><strong>Website</strong></p>
                         <p class="project-description">
                             These libraries were designed to assist users to find forms and directives easily, the sites
                             were designed with php and added AI Agents to improve the user experience.
@@ -428,7 +436,7 @@ include __DIR__ . '/templates/header.php';
                     class="project-card-link" aria-label="Open Allison's Portfolio website in a new tab">
                     <div class="project-content">
                         <h3 class="project-title">Allison's Portfolio</h3>
-                        <p class="project-type"><strong>Web Application</strong></p>
+                        <p class="project-type"><strong>Website</strong></p>
                         <p class="project-description">
                             I made a portfolio site for this young lady, who wanted to be admitted to a school art. I am
                             using PHP and JS.
